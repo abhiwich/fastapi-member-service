@@ -9,6 +9,7 @@ Python 3.9
 MongoDb
 ```
 ## Network Diagram
+![image](https://drive.google.com/uc?export=view&id=12pxcdrvUKSjd8wTOkovRur_a039QsSNa)
 ```
 ![image](https://drive.google.com/uc?export=view&id=12pxcdrvUKSjd8wTOkovRur_a039QsSNa)
 Python 3.9
