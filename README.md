@@ -17,8 +17,8 @@ MongoDb
 
 
 ## 1.Installation 
-- Docker install
-(https://docs.docker.com/engine/install/) - Docker install for you os.
+Docker install 
+https://docs.docker.com/engine/install/
 
 ## 2.Setup Network Backend-nw 
 ```sh
@@ -34,7 +34,7 @@ docker network inspect backend-nw
 ## 3.Setup MongoDb 
 #### 3.1 Docker pull
 ```sh
-docker pull mongo:5.0
+docker pull mongo:4.2.16
 ```
 #### 3.2 Create folder volumne
  for Mac 
@@ -48,10 +48,10 @@ mkdir Docker/mongodb
 ```
 #### 3.3 Docker run
 ```sh
-docker run -d -p 27017:27017 -v ~/Docker/mongodb:/data/db --name mongo-con mongo:5.0
+docker run -d -p 27017:27017 -v ~/Docker/mongodb:/data/db --name mongo-con mongo:4.2.16
 ```
 
-## 4.Setup Fastapi Project 
+## 4.Setup Fastapi Project (Member service)
 
 #### 4.1 Download member service
 ```sh
