@@ -20,15 +20,39 @@ MongoDb
 - Docker install
 (https://docs.docker.com/engine/install/) - Docker install for you os.
 
-
-## ทำการ clone project ด้วยคำสั่ง 
+## Setup Network Backend-nw 
+```sh
+docker network create --driver=bridge --subnet=172.18.0.0/16 backend-nw
+docker network ls
+docker network inspect backend-nw
 ```
+
+## Setup MongoDb 
+```sh
+- Docker pull MongoDb
+docker pull mongo:5.0
+
+- Create folder volumne for Mac 
+mkdir ~/Docker/mongodb
+- Create folder volumne for Windows 
+d:
+mkdir Docker/mongodb
+
+- Docker run
+docker run -d -p 27017:27017 -v ~/Docker/mongodb:/data/db --name mongo-con mongo:5.0
+```
+
+## Setup Fastapi Project 
+```sh
+- Download member service
 git clone https://github.com/abhiwich/fastapi-member-service.git
+
+- Docker build
+docker buile -t member-image:1.0 .
+docker images
+
+- Docker run
+docker run -d -p 8300:8000 --network=network-1 -e DATABASE_ENV=on -e MONGO_DB_URL=mongodb://mongo-con:27017 --name member-con member-image:1.1
 ```
 
-Some basic Git commands are:
-```
-git status
-git add
-git commit
-```
+
