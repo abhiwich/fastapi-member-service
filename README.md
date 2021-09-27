@@ -23,22 +23,31 @@ MongoDb
 ## 2.Setup Network Backend-nw 
 ```sh
 docker network create --driver=bridge --subnet=172.18.0.0/16 backend-nw
+```
+```
 docker network ls
+```
+```
 docker network inspect backend-nw
 ```
 
 ## 3.Setup MongoDb 
+#### 3.1 Docker pull
 ```sh
-- Docker pull MongoDb
 docker pull mongo:5.0
-
-- Create folder volumne for Mac 
+```
+#### 3.2 Create folder volumne
+ for Mac 
+```sh
 mkdir ~/Docker/mongodb
-- Create folder volumne for Windows 
+```
+for Windows 
+```sh
 d:
 mkdir Docker/mongodb
-
-- Docker run
+```
+#### 3.3 Docker run
+```sh
 docker run -d -p 27017:27017 -v ~/Docker/mongodb:/data/db --name mongo-con mongo:5.0
 ```
 
