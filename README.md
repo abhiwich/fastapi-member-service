@@ -42,17 +42,22 @@ mkdir Docker/mongodb
 docker run -d -p 27017:27017 -v ~/Docker/mongodb:/data/db --name mongo-con mongo:5.0
 ```
 
-## Setup Fastapi Project 
-```sh
-- Download member service
-git clone https://github.com/abhiwich/fastapi-member-service.git
+## 3.Setup Fastapi Project 
 
-- Docker build
+#### 3.1 Download member service
+```sh
+git clone https://github.com/abhiwich/fastapi-member-service.git
+```
+#### 3.2 Docker build
+```sh
 docker buile -t member-image:1.0 .
 docker images
-
-- Docker run
-docker run -d -p 8300:8000 --network=network-1 -e DATABASE_ENV=on -e MONGO_DB_URL=mongodb://mongo-con:27017 --name member-con member-image:1.1
 ```
+
+#### 3.3 Docker run
+```sh
+docker run -d -p 8300:8000 --network=network-1 -e DATABASE_ENV=on -e MONGO_DB_URL=mongodb://mongo-con:27017 --name member-con member-image:1.0
+```
+
 
 
