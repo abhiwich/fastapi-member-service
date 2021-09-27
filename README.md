@@ -10,8 +10,9 @@ MongoDb
 ```
 ## Network Diagram
 ![image](https://drive.google.com/uc?export=view&id=12pxcdrvUKSjd8wTOkovRur_a039QsSNa)
+![image](https://drive.google.com/uc?export=view&id=1nxORBuitb7yqhjz3EEdmRPRj3poIPvqV)
+
 ```
-![image](https://drive.google.com/uc?export=view&id=12pxcdrvUKSjd8wTOkovRur_a039QsSNa)
 Python 3.9
 MongoDb
 ```
