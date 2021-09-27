@@ -48,7 +48,7 @@ mkdir Docker/mongodb
 ```
 #### 3.3 Docker run
 ```sh
-docker run -d -p 27017:27017 -v ~/Docker/mongodb:/data/db --name mongo-con mongo:4.2.16
+docker run -d -p 27017:27017 -v ~/Docker/mongodb:/data/db --network=backend-nw --name mongo-con mongo:4.2.16
 ```
 
 ## 4.Setup Fastapi Project (Member service)
