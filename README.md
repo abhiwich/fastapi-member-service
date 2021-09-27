@@ -16,18 +16,18 @@ MongoDb
 ![image](https://drive.google.com/uc?export=view&id=1EaoKkVdKqHBUzhPuckBEK3aoRmRQyKpJ)
 
 
-## Installation 
+## 1.Installation 
 - Docker install
 (https://docs.docker.com/engine/install/) - Docker install for you os.
 
-## Setup Network Backend-nw 
+## 2.Setup Network Backend-nw 
 ```sh
 docker network create --driver=bridge --subnet=172.18.0.0/16 backend-nw
 docker network ls
 docker network inspect backend-nw
 ```
 
-## Setup MongoDb 
+## 3.Setup MongoDb 
 ```sh
 - Docker pull MongoDb
 docker pull mongo:5.0
@@ -42,21 +42,22 @@ mkdir Docker/mongodb
 docker run -d -p 27017:27017 -v ~/Docker/mongodb:/data/db --name mongo-con mongo:5.0
 ```
 
-## 3.Setup Fastapi Project 
+## 4.Setup Fastapi Project 
 
-#### 3.1 Download member service
+#### 4.1 Download member service
 ```sh
 git clone https://github.com/abhiwich/fastapi-member-service.git
 ```
-#### 3.2 Docker build
+#### 4.2 Docker build
 ```sh
 docker buile -t member-image:1.0 .
+```
+```sh
 docker images
 ```
-
-#### 3.3 Docker run
+#### 4.3 Docker run
 ```sh
-docker run -d -p 8300:8000 --network=network-1 -e DATABASE_ENV=on -e MONGO_DB_URL=mongodb://mongo-con:27017 --name member-con member-image:1.0
+docker run -d -p 8300:8000 --network=backend-nw -e MONGO_DB_URL=mongodb://mongo-con:27017 --name member-con member-image:1.0
 ```
 
 
