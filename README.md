@@ -5,6 +5,7 @@
 
 ## Requirement 
 ```
+Docker
 Python 3.9
 MongoDb
 ```
