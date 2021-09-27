@@ -16,7 +16,7 @@ from app.server.models.member import (
     UpdateMemberModel,
 )
 
-
+ 
 router = APIRouter()
 
 @router.post("/", response_description="Member data added into the database")
