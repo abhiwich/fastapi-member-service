@@ -61,7 +61,7 @@ git clone https://github.com/abhiwich/fastapi-member-service.git
 ```
 #### 4.2 Docker build
 ```sh
-docker buile -t member-image:1.0 .
+docker build -t member-image:1.0 .
 ```
 ```sh
 docker images
