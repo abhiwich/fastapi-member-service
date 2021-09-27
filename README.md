@@ -6,8 +6,8 @@
 ## Requirement 
 ```
 Docker
-Python 3.9
-MongoDb
+Python 3.9.7
+MongoDb 4.2.16 or higher
 ```
 ## Network Diagram
 ![image](https://drive.google.com/uc?export=view&id=1QfTYFx9L9_DFpzXFylZ1kDVyrx3BePz_)
