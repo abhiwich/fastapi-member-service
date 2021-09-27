@@ -19,7 +19,7 @@ class MemberSchema(BaseModel):
                 "address": "3/33 bangkok 10000",
             }
         }
-
+ 
 
 class UpdateMemberModel(BaseModel):
     fullname: Optional[str]

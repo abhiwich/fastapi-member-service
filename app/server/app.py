@@ -10,3 +10,4 @@ app.include_router(MemberRouter, tags=["Member"], prefix="/member")
 # async def read_root():
 #     return {"message": "Welcome to this fantastic app!"}
 
+ 

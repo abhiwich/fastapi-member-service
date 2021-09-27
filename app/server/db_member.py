@@ -31,7 +31,7 @@ async def db_get_all():
         members.append(member_helper(member))
     return members
 
-
+ 
 # Add a new member into to the database
 async def db_add_member(data: dict) -> dict:
     member = await collection.insert_one(data)
