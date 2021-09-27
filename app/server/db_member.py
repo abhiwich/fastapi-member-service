@@ -38,7 +38,7 @@ async def db_add_member(data: dict) -> dict:
     new_member = await collection.find_one({"_id": member.inserted_id})
     return member_helper(new_member)
 
-
+ 
 # Retrieve a member with a matching ID
 async def db_get_member(id: str) -> dict:
     member = await collection.find_one({"_id": ObjectId(id)})
