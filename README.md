@@ -4,3 +4,11 @@
 ทำการ clone project ด้วยคำสั่ง 
 
 git clone https://github.com/abhiwich/fastapi-member-service.git
+
+
+Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
