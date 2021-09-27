@@ -15,9 +15,11 @@ MongoDb
 
 ![image](https://drive.google.com/uc?export=view&id=1EaoKkVdKqHBUzhPuckBEK3aoRmRQyKpJ)
 
+
+## Installation 
 ```
-Python 3.9
-MongoDb
+##Docker install
+https://docs.docker.com/engine/install/
 ```
 
 ## ทำการ clone project ด้วยคำสั่ง 
